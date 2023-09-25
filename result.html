@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seek - Result</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<style>
+    #content {
+        max-height: 130px;
+        overflow: hidden;
+    }
+    .radialProgressBar {
+        border-radius: 50%;
+        width: 170px;
+        height: 170px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background: #ddd;
+        margin: 20px;
+        float: left;
+    }
+    .rt-container {
+        height: 220px;
+    }
+    .radialProgressBar .overlay {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        background: #ffffff;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 64px;
+        font-weight: 400;
+        color: #191A15;
+    }
+    .progress-0 {
+        background: linear-gradient(91.08deg, #2F4A73 0%, #002B23 100%);
+        background-image: linear-gradient(-90deg, #ddd 50%, #2F4A73 50%), linear-gradient(90deg, #2F4A73 50%, #ddd 50%);
+    }
+    .radial-progress label {
+        margin-top: 30px;
+        color: #191A15;
+    }
+</style>
+
+<body>
+
+    <section class="result_nav_section">
+        <div class="container">
+            <div class="result_nav_main">
+                <img src="assets/img/logo.svg" alt="">
+                <button type="button">Print Report</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="result_section_one">
+        <div class="container">
+            <div class="result_title_main">
+                <div class="result_title_div">
+                    <h1>Result</h1>
+                    <h3>Headache - Analysis</h3>
+                    <p>Overview</p>
+                </div>
+                <div class="result_input_div">
+                    <input type="date" placeholder="select Date">
+                </div>
+            </div>
+            <div class="result_bottom_text_main_div">
+                <div class="result_progrssbar">
+                    <div class="radial-progress">
+                        <label for="">Your Wellness Score</label>
+                        <div class="rt-container">
+                            <div class="radialProgressBar progress-0">
+                                <div class="overlay">50</div>
+                            </div>
+                        </div>
+                        <p for="">Your Wellness Score</p>
+                    </div>
+                </div>
+                <div class="result_progress_txt">
+                    <p> Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book</p>
+                </div>
+            </div>
+            <div class="result_last_condiions_main_div">
+                <h3 class="cond_title">Possible Condidtions</h3>
+                <div class="result_last_condition_card_main_div" id="content">
+                    <div class="result_last_condi">
+                        <div></div>
+                        <label for="">Strong Evidence</label>
+                    </div>
+                    <h3 class="cond_title">Tension Headaches</h3>
+                    <div class="last_detail pb-2">
+                        <label for="" class="label_text">Tension Type
+                            Headache</label>
+                        <button id="see-more" onclick="toggleContent()">View details <i class="mt-2 bi bi-arrow-right"></i></button>
+                        <button id="see-less" style="display: none;"
+                            onclick="toggleContent()">Hide details <i class="mt-2 bi bi-arrow-right"></i></button>
+                    </div>
+                    <div class="">
+                        <div class="cond_inner_text_div">
+                            <h4>About</h4>
+                            <label for="">Tension-type or tension headaches are the most common type of head pain. There’s no special treatment for them, but people can ease their symptoms by:</label>
+                            <p>Lying down in a dark, quiet room</p>
+                            <p>Drinking plenty of water</p>
+                            <p>Using an ice pack wrapped in fabric, like a towel, on their heads</p>
+                            <p>Using over-the-counter painkillers</p>
+                        </div>
+                        <div class="cond_inner_text_div">
+                            <h4>People should get medical care right away when they have:</h4>
+                            
+                            <p>Headaches that get worse</p>
+                            <p>A stiff neck</p>
+                            <p>Fever</p>
+                            <p>Confusion</p>
+                            <p>A loss of consciousness</p>
+                            <p>Severe eye or ear pain</p>
+                        </div>
+                        <div class="cond_inner_text_div">
+                            <h4>What is a tension-type headache?</h4>
+                            <label for="">Tension-type headaches are known as primary headaches, which means they're not caused by another condition. Most people have a tension-type headache at some point.</label>
+                            <label for="">Symptoms can be:</label>
+                            <p>A constant ache that affects both sides of the head</p>
+                            <p>Tight neck muscles</p>
+                            <p>A feeling of pressure behind the eyes</p>
+                            <small>How can people manage tension-type headaches?</small>
+                            <label for="">People can ease their symptoms by resting in a dark room with their eyes closed. They can also relieve neck and shoulder muscle tension with a heating pad, hot water bottle, or hot bath. Placing a cool cloth or an ice pack wrapped in fabric, like a towel, on the forehead and drinking a lot of water can help, too.</label>
+                        </div>
+                        <div class="cond_inner_text_div">
+                            <h4>Presence of symptoms:</h4>
+                            <p>Headache</p>
+                            <p>Moderate headache</p>
+                            <p>Series of headaches</p>
+                            <p>Headaches for 3 months or more</p>
+                            <p>Headache lasting between 5 minutes and 4 hours</p>
+                            <small>Please contact a doctor or other medical professional if you have questions or concerns about your health.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        function toggleContent() {
+            var content = document.getElementById("content");
+            var seeMoreButton = document.getElementById("see-more");
+            var seeLessButton = document.getElementById("see-less");
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                seeMoreButton.style.display = "block";
+                seeLessButton.style.display = "none";
+            } else {
+                content.style.maxHeight = "none"; /* Set to appropriate value */
+                seeMoreButton.style.display = "none";
+                seeLessButton.style.display = "block";
+            }
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

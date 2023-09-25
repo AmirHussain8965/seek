@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html data-wf-domain="www.flozy.com" data-wf-page="6475a940c33e48ca85a6d4b0"
+  data-wf-site="61461a5621e91a9346dd631e">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Seek - TEST</title>
+</head>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .slider-container {
+    overflow: hidden;
+    height: 200px;
+    /* Set the desired height of the slider */
+    width: 200px;
+    /* Set the desired width of the slider */
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    animation: slide 5s linear infinite;
+    /* Adjust the animation duration as needed */
+  }
+
+  .slide {
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+    /* Initially hide the slides */
+  }
+
+  @keyframes slide {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    10%,
+    90% {
+      transform: translateY(-100%);
+    }
+
+    20%,
+    80% {
+      transform: translateY(-200%);
+    }
+
+    30%,
+    70% {
+      transform: translateY(-300%);
+    }
+
+    40%,
+    60% {
+      transform: translateY(-400%);
+    }
+
+    50% {
+      transform: translateY(-500%);
+    }
+  }
+</style>
+
+
+<body>
+
+
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">Slide 1</div>
+      <div class="slide">Slide 2</div>
+      <div class="slide">Slide 3</div>
+      <!-- Add more slides as needed -->
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var slides = $(".slide");
+      var slideIndex = 0;
+
+      function showNextSlide() {
+        slides.eq(slideIndex).animate({ opacity: 0 }, 500, function () {
+          $(this).css("transform", "translateY(0)").appendTo(".slider").animate({ opacity: 1 }, 500);
+        });
+        slideIndex = (slideIndex + 1) % slides.length;
+      }
+
+      setInterval(showNextSlide, 3000); // Adjust the interval as needed
+    });
+
+  </script>
+
+</body>
+
+</html>

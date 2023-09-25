@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seek - Login </title>
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="accounts_logo">
+        <img src="../assets/img/logo.svg" alt="">
+    </div>
+
+    <section class="login_section_one">
+        <div class="login_left_main_div">
+            <div class="login_card_body_div">
+                <div class="login_text_div">
+                    <h1 class="welcomeback">Welcome Back</h1>
+                    <h4>Sign in</h4>
+                    <p>No account <b>Begin here!</b></p>
+                </div>
+                <div class="login_input_div">
+                    <label for="">Email</label>
+                    <div>
+                        <input type="email"
+                            placeholder="Enter your email address">
+                        <img src="../assets/img/message.png" class="left_img"
+                            alt="">
+                    </div>
+                </div>
+                <div class="login_input_div">
+                    <label for="">Password</label>
+                    <div>
+                        <input type="password" id="password"
+                            placeholder="Enter your Password">
+                        <img src="../assets/img/padlock.png" class="left_img"
+                            alt="">
+                        <img src="../assets/img/eye.png" alt="Show Password"
+                            class="toggle" id="show">
+                        <img src="../assets/img/hidden.png" alt="Hide Password"
+                            class="toggle" id="hide">
+                    </div>
+                </div>
+                <div class="login_remem_div">
+                    <div class="remem_one">
+                        <input type="checkbox" id="rem">
+                        <label for="rem">Remember me</label>
+                    </div>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="login_btn_div">
+                    <button type="button">Sign in</button>
+                </div>
+                <label for="" class="lat_login_text">or continue with</label>
+                <div class="login_social_icons">
+                    <img src="../assets/img/Facebook.png" alt="">
+                    <img src="../assets/img/apple.png" alt="">
+                    <img src="../assets/img/google.png" alt="">
+                </div>
+                <p class="last_text">No account <a href="../accounts/reset.html">Begin here!</a></p> 
+            </div>
+        </div>
+        <div class="login_right_main_div">
+            <h1>Welcome <br> Back</h1>
+        </div>
+    </section>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".toggle").click(function () {
+                var passwordField = $("#password");
+                var fieldType = passwordField.attr("type");
+
+                if (fieldType === "password") {
+                    passwordField.attr("type", "text");
+                    $(".toggle").removeClass("visible");
+                    $("#hide").addClass("visible");
+                } else {
+                    passwordField.attr("type", "password");
+                    $(".toggle").removeClass("visible");
+                    $("#show").addClass("visible");
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
